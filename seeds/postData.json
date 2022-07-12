@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Why MVC is so important",
+      "content": "MVC allows for the separation of concerns, devising their code between the model layer for data, view layer for design and controller layer for the logic of the application."    
+    },
+    {
+      "title": "Authentication Vs Authorisation",
+      "content": "Authentication refers to authenticating your own identity, whilst authorisation deals with being authorising a user with access into the system."    
+    },
+    {
+      "title": "Object Relational Mapping",
+      "content": "Object-relational mapping (ORM) is a technique that creates a layer between the language and the database, helping programmers work with data without the OOP paradigm."    
+    }
+  ]
+  
