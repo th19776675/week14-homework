@@ -1,0 +1,30 @@
+<div class="post-card">
+    <h3>{{post.title}}</h3>
+    <p class="post-body">{{post.content}}</p>
+    <p class="post-tag">by {{post.user.name}} posted on <span class="text-bubble">{{format_date post.date_created}}</span> </p>
+</div >
+
+
+<div class="comment-wrapper">
+{{#each post.comments as |comment|}}
+<div class="post-card comment-card">
+    <p class="post-body">{{comment.content}}</p>
+    <p class="post-tag">commented by {{comment.user.name}} on <span class="text-bubble">{{format_date comment.date_created}}</span> </p>
+</div >
+{{/each}}
+</div>
+
+
+<div class="form-wrapper">
+    <form class="form update-form">
+        <div class="form-group">
+        <label for="comment">Write Comment:</label>
+        <textarea class="form-input" type="type" id="comment"></textarea>
+        </div>
+        <div class="form-group">
+        <button class="btn btn-primary" type="submit">Comment</button>
+        </div>
+    </form>
+</div>
+
+<script src="/js/comment.js"></script>

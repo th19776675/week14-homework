@@ -1,10 +1,20 @@
-<button>Add New Post</button>
+<div class="dash-btn">
+  <a class="btn" href="/create">Add New Post</a>
+</div>
+<div class="dash-wrapper">
 
-{{#each user.posts as |post|}}
-  <div>
-    <a href="">
-    <h3>{{post.title}}</h3>
-    <p>{{post.date_created}}</p>
-    </a>
-  </div>
-{{/each}}
+  {{#each user.posts as |post|}}
+    <div class="post-card">
+      <a href="/post/{{post.id}}">
+      <h3>{{post.title}}</h3>
+      <span class="text-bubble">{{format_date post.date_created}}</span>
+      </a>
+      <button class="delete-btn btn" data-id="{{post.id}}">Delete</button>
+      <a href="/update/{{post.id}}" class="update-btn btn">Update</a>
+      
+    </div>
+  {{/each}}
+
+</div>
+
+<script src="/js/dashboard.js"></script>

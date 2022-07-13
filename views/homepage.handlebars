@@ -24,11 +24,13 @@
 {{/each}} --}}
 
 {{#each posts as |post|}}
-  <div>
-    <h3>{{post.title}}</h3>
-    <p>{{post.content}}</p>
-    <p>by {{post.user.name}} </p>
-  </div>
+  <a href="/post/{{post.id}}">
+    <div class="post-card">
+      <h3>{{post.title}}</h3>
+      <p class="post-body">{{post.content}}</p>
+      <p class="post-tag">by {{post.user.name}} posted on <span class="text-bubble">{{format_date post.date_created}}</span> </p>
+    </div >
+  </a>
 {{/each}}
 
 
